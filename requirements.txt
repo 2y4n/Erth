@@ -1,7 +1,6 @@
 transformers
 openai
 torch
-os
 wave
 pyaudio
 requests
