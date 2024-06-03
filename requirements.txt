@@ -1,4 +1,4 @@
-transformers==3.5.1
+transformers
 openai
 torch
 json
