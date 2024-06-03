@@ -34,10 +34,10 @@ def load_gpt2_model(path):
 # model = GPT2LMHeadModel.from_pretrained("ft_medium_aragpt2_saudi_traditions")
 # tokenizer = GPT2Tokenizer.from_pretrained("ft_medium_aragpt2_saudi_traditions")
 
-gpt2_model, gpt2_tokenizer = load_gpt2_model("Medium")
+gpt2_model, gpt2_tokenizer = load_gpt2_model("rarayayan/testftargpt2")
 
-openai_api_key = st.secrets["OPENAI_API_KEY"]
-openai.api_key = openai_api_key
+#openai_api_key = st.secrets["OPENAI_API_KEY"]
+#openai.api_key = openai_api_key
 
 # Function to tokenize text using NLTK
 def nltk_tokenize(text):
@@ -116,7 +116,7 @@ def transcribe_audio_with_whisper(file_path):
     return transcription['text']
 
 #generate text AraGPT2
-second_gpt2_model, second_gpt2_tokenizer = load_gpt2_model("fine_tuned_aragpt2_saudi_traditions")
+second_gpt2_model, second_gpt2_tokenizer = load_gpt2_model("rarayayan/testftargpt2")
 
 def generate_text(text, max_length=150, num_return_sequences=1, temperature=0.7, top_p=0.9, top_k=50):
     text_generator = pipeline("text-generation", model=second_gpt2_model, tokenizer=second_gpt2_tokenizer)
@@ -161,7 +161,7 @@ def convert_text_to_speech(text, output_path):
 
 
 #tabs
-tab1, tab2, tab3 = st.tabs(["FT-AraGPT2 Text-to-text", "FT-AraGPT2 Speech-to-speech", "OpenAI API"])
+tab1, tab2 = st.tabs(["FT-AraGPT2 Text-to-text", "FT-AraGPT2 Speech-to-speech"])#, "OpenAI API"])
 
 with tab1:
     st.header("Fine-Tuned AraGPT2 Text-To-Text")
@@ -205,9 +205,8 @@ with tab2:
                 st.write("Playing the generated audio...")
                 audio = AudioSegment.from_file(output_audio)
                 play(audio)
-            else if:
-                st.write("Playing the generated audio...")
-
+            else:
+                st.write("Generated audio file does not exist.")
         else:
             st.write("Transcription failed.")
     else:
