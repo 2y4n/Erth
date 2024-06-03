@@ -5,3 +5,4 @@ torch
 wave
 pyaudio
 requests
+pydub
