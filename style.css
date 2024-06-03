@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #dec9b2; /* Change this to match your background color */
+}
+
+#chat-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff; /* Change this to match your input background color */
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#messages-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 150px; /* Space for chat input container */
+}
