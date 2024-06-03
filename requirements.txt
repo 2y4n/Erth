@@ -1,5 +1,6 @@
 transformers
 openai
+nltk
 torch
 wave
 pyaudio
