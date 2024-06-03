@@ -1,7 +1,6 @@
 transformers
 openai
 torch
-json
 os
 wave
 pyaudio
