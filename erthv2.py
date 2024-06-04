@@ -160,7 +160,7 @@ openai.api_key = OPENAI_API_KEY
 
 
 #tabs
-tab1 = st.tabs(["FT-AraGPT2 Text-to-text"])#, "FT-AraGPT2 Speech-to-speech", "OpenAI API"])
+tab1 = st.tabs(["FT-AraGPT2 Text-to-text"],)#, "FT-AraGPT2 Speech-to-speech", "OpenAI API"])
 
 with tab1:
     st.header("Fine-Tuned AraGPT2 Text-To-Text")
