@@ -24,7 +24,7 @@ load_css('style.css')
 st.image("Erth.png", use_column_width=True)  
 st.title("Erth | إرث")
 
-
+@st.cache
 def load_gpt2_model(path):
     model = GPT2LMHeadModel.from_pretrained(path)
     tokenizer = GPT2Tokenizer.from_pretrained(path)
@@ -33,7 +33,7 @@ def load_gpt2_model(path):
 #AraGPT2 model & Tokenizer
 # model = GPT2LMHeadModel.from_pretrained("ft_medium_aragpt2_saudi_traditions")
 # tokenizer = GPT2Tokenizer.from_pretrained("ft_medium_aragpt2_saudi_traditions")
-@st.cache
+
 gpt2_model, gpt2_tokenizer = load_gpt2_model("rarayayan/testftargpt2")
 
 #openai_api_key = st.secrets["OPENAI_API_KEY"]
