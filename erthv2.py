@@ -24,7 +24,6 @@ load_css('style.css')
 st.image("Erth.png", use_column_width=True)  
 st.title("Erth | إرث")
 
-@st.cache
 def load_gpt2_model(path):
     model = GPT2LMHeadModel.from_pretrained(path)
     tokenizer = GPT2Tokenizer.from_pretrained(path)
