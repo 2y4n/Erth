@@ -12,6 +12,7 @@ import requests
 from pydub import AudioSegment
 from pydub.playback import play
 
+@st.cache
 nltk.download('punkt')
 
 #Load CSS
@@ -33,7 +34,7 @@ def load_gpt2_model(path):
 #AraGPT2 model & Tokenizer
 # model = GPT2LMHeadModel.from_pretrained("ft_medium_aragpt2_saudi_traditions")
 # tokenizer = GPT2Tokenizer.from_pretrained("ft_medium_aragpt2_saudi_traditions")
-
+@st.cache
 gpt2_model, gpt2_tokenizer = load_gpt2_model("rarayayan/testftargpt2")
 
 #openai_api_key = st.secrets["OPENAI_API_KEY"]
