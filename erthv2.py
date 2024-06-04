@@ -12,14 +12,13 @@ import requests
 from pydub import AudioSegment
 from pydub.playback import play
 
-@st.cache
 nltk.download('punkt')
 
 #Load CSS
 def load_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
+@st.cache
 load_css('style.css')
 
 st.image("Erth.png", use_column_width=True)  
