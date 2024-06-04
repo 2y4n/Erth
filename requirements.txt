@@ -1,4 +1,4 @@
-transformers
+transformers==3.5.1
 openai
 nltk
 torch
