@@ -8,6 +8,7 @@ from langchain_openai.embeddings import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
+from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone
 
 # Load CSS
