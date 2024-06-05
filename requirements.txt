@@ -6,3 +6,9 @@ wave
 pyaudio
 requests
 pydub
+langchain
+langchain_community
+langchain_openai
+langchain_pinecone
+langchain_core
+pinecone 
