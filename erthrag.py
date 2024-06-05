@@ -58,9 +58,9 @@ pc = Pinecone(api_key=PINECONE_API_KEY)
 index_name = "erth"
 
 # Pinecone Vector Store
-pinecone_vectorstore = PineconeVectorStore.from_documents(
-    splitted, embedding, index_name=index_name
-)
+# pinecone_vectorstore = PineconeVectorStore.from_documents(
+#     splitted, embedding, index_name=index_name
+# )
 
 # Final chain with Pinecone
 chain = (
