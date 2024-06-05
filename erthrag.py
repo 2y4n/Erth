@@ -41,17 +41,17 @@ Question: {question}
 prompt = ChatPromptTemplate.from_template(template)
 parser = StrOutputParser()
 
-# Load data
-data_path = "data.txt"
-loader = TextLoader(data_path)
-text = loader.load()
+# # Load data
+# data_path = "data.txt"
+# loader = TextLoader(data_path)
+# text = loader.load()
 
-# Split text
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
-splitted = text_splitter.split_documents(text)
+# # Split text
+# text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
+# splitted = text_splitter.split_documents(text)
 
-# Embedding
-embedding = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
+# # Embedding
+# embedding = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 
 # Initialize Pinecone
 pc = Pinecone(api_key=PINECONE_API_KEY)
